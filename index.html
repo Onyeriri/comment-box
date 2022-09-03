@@ -16,41 +16,46 @@
 <body>
   <!-- first header section -->
   <header>
-    <h1>Please register and leave your comment.</h1>
+    <h1>Please register and leave your comments.</h1>
   </header>
 
   <!-- first section -->
-  <section>
-    <form action="">
+  <section class="main-container">
+    <form action="" class="form-container">
       <label for="name">Name:</label><br>
       <input type="text" name="" id="name" placeholder="Please enter your name"><br><br>
       <label for="email">Email:</label><br>
       <input type="email" name="" id="email" placeholder="Please enter your email address"><br><br>
-      <span>140/140</span><br><br>
-      <textarea name="" id="" cols="50" rows="10" placeholder="Please leave a comment"></textarea><br><br>
-      <button type="submit">Submit</button>
+      <div class="left">
+        <span>
+          140/140
+        </span>
+      </div>
+      <textarea name="" id="" cols="44" rows="10" placeholder="Please leave your comment"></textarea><br><br>
+      <div class="btn-container">
+        <button type="submit"
+        class="btn"
+        >
+        Submit
+        </button>
+      </div>
     </form>
   </section>
 
   <!-- second section -->
-  <section>
+  <section class="display-section">
     <hr>
-  <header>
-    <h2>Your inputs have been recorded see below.</h2>
-  </header>
-  <form action="">
-    <label for="name">Name:</label><br>
-    <input type="text" name="" id="name" placeholder="Please enter your name"><br><br>
-    <label for="email">Email:</label><br>
-    <input type="email" name="" id="email" placeholder="Please enter your email address"><br><br>
-    <span>140/140</span><br><br>
-    <textarea name="" id="" cols="50" rows="10" placeholder="Please leave a comment"></textarea><br><br>
-    <button type="submit">Submit</button>
-  </form>
+    <h2>Your inputs have been recorded see below.
+
+    </h2>
+  <div class="feedback">
+    <p>Name</p>
+    <p>comments</p>
+  </div>
   </section>
 
   <!-- footer section -->
-  <footer class="fa-3x">
+  <footer class="fa-3x footer-container">
     <ul>
       <li>
         <a href="#">
