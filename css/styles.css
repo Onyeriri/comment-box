@@ -1,0 +1,250 @@
+/* 
+google fonts used in this project
+font-family: 'Anton', sans-serif; h1
+font-family: 'Dosis', sans-serif; p
+font-family: 'Noto Serif', serif; h2
+ */
+
+ /* css reset */
+ * {
+  box-sizing: border-box;
+ }
+
+ body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td
+{
+margin: 0; padding: 0; border: 0; outline: none;
+}
+ 
+body
+{
+line-height: 1.5em;
+font-size: 88%;
+text-align: justify;
+/* padding: 1em; */
+}
+ 
+h1, h2, h3, h4, h5, h6
+{
+font-size: 100%;
+padding: .6em 0;
+text-transform: uppercase;
+}
+ 
+ul, ol
+{
+list-style: none;
+}
+ 
+a
+{
+color: black;
+text-decoration: none;
+}
+ 
+a:hover
+{
+text-decoration: underline;
+}
+ 
+.floatLeft
+{
+float: left;
+padding: .5em .5em .5em 0;
+}
+ 
+.floatRight
+{
+float: right;
+padding: .5em 0 .5em .5em;
+}
+
+/* header section css rules */
+header {
+  background-color: #131200;
+  color: #EEF5DB;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 4em 0;
+  padding: 1em 0;
+}
+
+header > h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1em;
+  letter-spacing: .2em;
+  font-weight: 100;
+  padding: 0 .2em;
+}
+
+/* main container */
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  background-image: url('/images/pexels-hasan-albari-1229861.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #fff;
+  border-radius: 20px;
+}
+
+.form-container {
+  margin: 2em 0;
+  color: #EEF5DB;
+  width: 100%;
+  padding: 0 2em;
+}
+
+.left {
+  display: flex;
+  justify-content: end;
+}
+
+.left > span {
+  padding: .2em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 8em;
+  border: 5px solid #EEF5DB;
+  border-radius: 15px;
+  color: #131200;
+  letter-spacing: .2em;
+  font-family: 'Dosis', sans-serif;
+  font-weight:bolder;
+}
+
+.btn:hover {
+  background-color: #5DA9E9;
+  border: 5px solid #5DA9E9;
+  color: #EEF5DB;
+}
+
+textarea {
+  padding: 1em;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  width: 100%;
+  resize: none;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding: .2em;
+  border: 5px solid #fff;
+  border-radius: 20px;
+}
+
+.display-section {
+  /* display: none; */
+  margin: 3em 0 0 0;
+}
+
+.display-section > h2 {
+  font-family: 'Noto Serif', serif;
+  background-color: #5DA9E9;
+  font-size: .8em;
+  text-align: center;
+  color: #EEF5DB;
+  margin: 2em 0 3em 0;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  background-color: #131200;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  position: absolute;
+  bottom: -206px;
+  left: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+footer > ul > li > a > i {
+  color: #EEF5DB;
+} 
+
+body {
+  position: relative;
+}
+
+.feedback {
+  width: 90%;
+  background-color: red;
+  margin: 0 auto;
+  padding: .5em;
+}
+
+label, .feedback, span, textarea {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  letter-spacing: .1em;
+  font-size: .9em;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 320px) {..} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+  header > h1 {
+    font-size: 1.2em;
+  letter-spacing: .4em;
+  font-weight: 200;
+  padding: 1em .2em;
+  }
+
+  .main-container {
+    width: 50%;
+    padding: 0 1em;
+  }
+
+  .display-section > h2 {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+
+  ul {
+    width: 30%;
+  }
+
+  .feedback {
+    width: 50%;
+  }
+
+  label, .feedback, span, textarea {
+    font-size: 1.3em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
