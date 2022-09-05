@@ -21,19 +21,31 @@
 
   <!-- first section -->
   <section class="main-container">
-    <form action="" class="form-container">
+    <form onsubmit="formSubmit(event)" 
+    class="form-container" id="form-element">
+    <p class="warning" id="warning">Fields cannot be empty</p>
       <label for="name">Name:</label><br>
-      <input type="text" name="" id="name" placeholder="Please enter your name"><br><br>
+      <input value="" type="text" name="name" id="name" placeholder="Please enter your name"><br><br>
       <label for="email">Email:</label><br>
-      <input type="email" name="" id="email" placeholder="Please enter your email address"><br><br>
+      <input value="" type="email" name="email" id="email" placeholder="Please enter your email address"><br><br>
       <div class="left">
         <span>
           140/140
         </span>
       </div>
-      <textarea name="" id="" cols="44" rows="10" placeholder="Please leave your comment"></textarea><br><br>
+      <textarea 
+      name="comments"
+      id="comments"
+      value=""
+      cols="44" 
+      rows="10"
+      maxlength="140"
+      onkeyup="wordLength()"
+      placeholder="Please leave your comment"></textarea>
+      <br><br>
       <div class="btn-container">
-        <button type="submit"
+        <button 
+        type="submit"
         class="btn"
         >
         Submit
@@ -43,14 +55,13 @@
   </section>
 
   <!-- second section -->
-  <section class="display-section">
-    <hr>
+  <section class="display-section" id="comment-box">
     <h2>Your inputs have been recorded see below.
 
     </h2>
   <div class="feedback">
-    <p>Name</p>
-    <p>comments</p>
+    <p id="name-output"></p>
+    <p id="comment-output"></p>
   </div>
   </section>
 
@@ -80,5 +91,6 @@
       </li>
     </ul>
   </footer>
+  <script src="/js/script.js"></script>
 </body>
 </html>
