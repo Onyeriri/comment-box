@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=Noto+Serif&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href='https://css.gg/instagram.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="https://kit.fontawesome.com/fa9ce4128a.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png"">
-  <title>Comment Box</title>
-</head>
-<body>
-  <!-- first header section -->
-  <header>
-    <h1>Please register and leave your comments.</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="https://css.gg/instagram.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/fa9ce4128a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" sizes="512x512"
+    href="favicon/android-chrome-512x512.png"">
+    <title>Comment Box</title>
+  </head>
+  <body>
+    <!-- first header section -->
+    <header>
+      <h1>Please register and leave your comments.</h1>
+    </header>
 
-  <!-- first section -->
-  <section class="main-container">
-    <form onsubmit="formSubmit(event)" 
-    class="form-container" id="form-element">
-    <p class="warning" id="warning">Fields cannot be empty</p>
-      <label for="name">Name:</label><br>
-      <input value="" type="text" name="name" id="name" placeholder="Please enter your name"><br><br>
-      <label for="email">Email:</label><br>
-      <input value="" type="email" name="email" id="email" placeholder="Please enter your email address"><br><br>
-      <div class="left">
-        <span>
-          140/140
-        </span>
+    <!-- first section -->
+    <section class="main-container">
+      <form
+        onsubmit="formSubmit(event)"
+        class="form-container"
+        id="form-element"
+      >
+        <p class="warning" id="warning">Fields cannot be empty</p>
+        <label for="name">Name:</label><br />
+        <input
+          value=""
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Please enter your name"
+        /><br /><br />
+        <label for="email">Email:</label><br />
+        <input
+          value=""
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Please enter your email address"
+        /><br /><br />
+        <div class="left">
+          <span> 140/140 </span>
+        </div>
+        <textarea
+          name="comments"
+          id="comments"
+          value=""
+          cols="44"
+          rows="10"
+          maxlength="140"
+          onkeyup="wordLength()"
+          placeholder="Please leave your comment"
+          required
+        ></textarea>
+        <br /><br />
+        <div class="btn-container">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- second section -->
+    <section class="display-section" id="comment-box">
+      <h2>Your inputs have been recorded see below.</h2>
+      <div class="feedback">
+        <p id="name-output"></p>
+        <p id="comment-output"></p>
       </div>
-      <textarea 
-      name="comments"
-      id="comments"
-      value=""
-      cols="44" 
-      rows="10"
-      maxlength="140"
-      onkeyup="wordLength()"
-      placeholder="Please leave your comment"></textarea>
-      <br><br>
-      <div class="btn-container">
-        <button 
-        type="submit"
-        class="btn"
-        >
-        Submit
-        </button>
-      </div>
-    </form>
-  </section>
+    </section>
 
-  <!-- second section -->
-  <section class="display-section" id="comment-box">
-    <h2>Your inputs have been recorded see below.
-
-    </h2>
-  <div class="feedback">
-    <p id="name-output"></p>
-    <p id="comment-output"></p>
-  </div>
-  </section>
-
-  <!-- footer section -->
-  <footer class="fa-3x footer-container">
-    <ul>
-      <li>
-        <a href="#">
-          <i 
-          class="fa-brands fa-facebook"
-          ></i>
-        </a></li>
-      <li>
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </li>
-    </ul>
-  </footer>
-  <script src="/js/script.js"></script>
-</body>
+    <!-- footer section -->
+    <footer class="fa-3x footer-container">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="/script/script.js"></script>
+  </body>
 </html>
