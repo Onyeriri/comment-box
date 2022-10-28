@@ -109,7 +109,7 @@ header > h1 {
 .main-container {
   width: 90%;
   margin: 0 auto;
-  background-image: url("/images/pexels-hasan-albari-1229861.jpg");
+  background-image: url("../images/pexels-hasan-albari-1229861.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
